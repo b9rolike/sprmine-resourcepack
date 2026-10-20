@@ -5,12 +5,17 @@ from pathlib import Path
 import zipfile
 from PIL import Image
 import io
+from pack_metadata import validate_metadata
 
 root=Path(__file__).resolve().parents[1]
-file=root/"dist/sprmine-unified-v1.4-clans-1.21.11.zip"
 manifest=json.loads((root/"dist/manifest.json").read_text(encoding="utf-8"))
+assert Path(manifest["file"]).name == manifest["file"], "unsafe manifest filename"
+file=root/"dist"/manifest["file"]
 assert hashlib.sha1(file.read_bytes()).hexdigest()==manifest["sha1"]
+assert hashlib.sha256(file.read_bytes()).hexdigest()==manifest["sha256"]
+assert file.stat().st_size==manifest["bytes"]
 with zipfile.ZipFile(file) as z, zipfile.ZipFile(root/"sprmine-ranks-v1.3-vanilla-font-1.21.11.zip") as old:
+    validate_metadata(json.loads(z.read("pack.mcmeta")))
     names=z.namelist()
     assert len(names)==len(set(names))
     for n in old.namelist():
@@ -36,4 +41,4 @@ with zipfile.ZipFile(file) as z, zipfile.ZipFile(root/"sprmine-ranks-v1.3-vanill
                     assert 0<provider["ascent"]<=provider["height"]<=256
                     assert im.getpixel((175,0))[3]>0
                 assert len(chars)==len(set(chars))==4
-print("PASS: zip, baseline, font, 7 item model/texture references, dimensions and hash")
+print("PASS: metadata format 75, zip, baseline, font, 7 item model/texture references, dimensions and hashes")

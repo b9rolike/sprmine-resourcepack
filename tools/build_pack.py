@@ -5,13 +5,14 @@ import json
 from pathlib import Path
 import zipfile
 from PIL import Image, ImageDraw
+from pack_metadata import validate_metadata
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "sprmine-ranks-v1.3-vanilla-font-1.21.11.zip"
 EXPECTED = "557FB48683E85AA323F9A8E4E5D2D856FC0B61145BA51B224CEE253162A67AA3"
 assert hashlib.sha256(BASE.read_bytes()).hexdigest().upper() == EXPECTED
 SOURCE = ROOT / "pack-source"
-OUTPUT = ROOT / "dist/sprmine-unified-v1.4-clans-1.21.11.zip"
+OUTPUT = ROOT / "dist/sprmine-unified-v1.4.1-clans-1.21.11.zip"
 BG, PANEL, EDGE, VIOLET, WHITE = "#18151F", "#272130", "#494052", "#A78BDA", "#F2EEF7"
 
 def emit_json(path, value):
@@ -95,7 +96,10 @@ for path in SOURCE.rglob("*"):
         assert key.startswith("assets/sprmine/"), key
         assert key not in entries, f"unexpected rank resource replacement: {key}"
         entries[key]=path.read_bytes()
-entries["pack.mcmeta"] = (json.dumps({"pack":{"pack_format":75,"description":"SPRMine | ранги и меню кланов | тестовая версия"}},ensure_ascii=False)+"\n").encode()
+metadata = {"pack":{"pack_format":75,"min_format":75,"max_format":75,
+                    "description":"SPRMine | ранги и меню кланов | тестовая версия"}}
+validate_metadata(metadata)
+entries["pack.mcmeta"] = (json.dumps(metadata,ensure_ascii=False)+"\n").encode()
 assert all(entries[n] == data for n,data in old_entries.items() if n != "pack.mcmeta")
 OUTPUT.parent.mkdir(parents=True,exist_ok=True)
 with zipfile.ZipFile(OUTPUT,"w",zipfile.ZIP_DEFLATED) as z:
