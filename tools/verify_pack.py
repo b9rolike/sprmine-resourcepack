@@ -40,5 +40,8 @@ with zipfile.ZipFile(file) as z, zipfile.ZipFile(root/"sprmine-ranks-v1.3-vanill
                     assert im.size==(176,provider["height"])
                     assert 0<provider["ascent"]<=provider["height"]<=256
                     assert im.getpixel((175,0))[3]>0
-                assert len(chars)==len(set(chars))==4
-print("PASS: metadata format 75, zip, baseline, font, 7 item model/texture references, dimensions and hashes")
+                assert len(chars)==len(set(chars))==28
+    assert len([n for n in names if n.startswith("assets/sprmine/items/clans/")])==28
+    hitbox=Image.open(io.BytesIO(z.read("assets/sprmine/textures/item/clans/hitbox.png")))
+    assert hitbox.getchannel("A").getextrema()==(0,0)
+print("PASS: metadata format 75, zip, baseline, 28 layouts, 28 item model/texture references, transparent hitbox, dimensions and hashes")

@@ -11,7 +11,7 @@
     {
       "type": "bitmap",
       "file": "sprmine:gui/clans/main.png",
-      "height": 168,
+      "height": 204,
       "ascent": 13,
       "chars": [
         ""
@@ -20,7 +20,7 @@
     {
       "type": "bitmap",
       "file": "sprmine:gui/clans/clanless.png",
-      "height": 168,
+      "height": 204,
       "ascent": 13,
       "chars": [
         ""
@@ -42,6 +42,222 @@
       "ascent": 13,
       "chars": [
         ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/generic_3.png",
+      "height": 168,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/generic_4.png",
+      "height": 186,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/generic_5.png",
+      "height": 204,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/generic_6.png",
+      "height": 222,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/bank_3.png",
+      "height": 168,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/bank_4.png",
+      "height": 186,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/bank_5.png",
+      "height": 204,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/bank_6.png",
+      "height": 222,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/development_3.png",
+      "height": 168,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/development_4.png",
+      "height": 186,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/development_5.png",
+      "height": 204,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/development_6.png",
+      "height": 222,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/shop_3.png",
+      "height": 168,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/shop_4.png",
+      "height": 186,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/shop_5.png",
+      "height": 204,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/shop_6.png",
+      "height": 222,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/chronicle_3.png",
+      "height": 168,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/chronicle_4.png",
+      "height": 186,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/chronicle_5.png",
+      "height": 204,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/chronicle_6.png",
+      "height": 222,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/staff_3.png",
+      "height": 168,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/staff_4.png",
+      "height": 186,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/staff_5.png",
+      "height": 204,
+      "ascent": 13,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "sprmine:gui/clans/staff_6.png",
+      "height": 222,
+      "ascent": 13,
+      "chars": [
+        ""
       ]
     }
   ]
